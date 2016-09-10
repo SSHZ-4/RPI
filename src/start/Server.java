@@ -41,7 +41,7 @@ public class Server {
 			  Socket socket = server.accept();
 			  System.out.println("收到请求");
 			  InputStream in = socket.getInputStream();
-			  FileOutputStream f =new FileOutputStream("//123.wav");
+			  FileOutputStream f =new FileOutputStream("123.wav");
 			 while(in.read(b)!=-1)
 			 {
 				 f.write(b);
@@ -58,7 +58,7 @@ public class Server {
 				file.close();
 				*/
 			//  synchronized(new Object()) {
-				  DataTest.read("//123.wav");
+				  DataTest.read("123.wav");
 		//	}
 			  
 			  System.out.println(b.length+"读的大小");
