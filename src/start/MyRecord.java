@@ -54,10 +54,9 @@ public class MyRecord {
 			br.readLine();
 			//Thread.sleep(10000);
 			MyRecord mr = new MyRecord();
+
 			
-			System.out.println("开始录音");
-			
-			System.out.println("开始录音");
+			System.out.println("start recording");
 			mr.capture();
 			mr.stopflag=true;
 			
@@ -68,7 +67,7 @@ public class MyRecord {
 			File file = new File("zhangxu.mp3");  
 	        byte [] buf =new byte[1000];
 	        int len=0;
-	        Socket socket = new Socket("192.168.1.181",11348);//169.254.102.160
+	        Socket socket = new Socket("192.168.1.111",11348);//169.254.102.160
 			OutputStream out =socket.getOutputStream();
 	        FileInputStream fi = new FileInputStream(file);  
 	        while((len=fi.read(buf))!=-1)
@@ -76,7 +75,7 @@ public class MyRecord {
 	         out.write(buf, 0, len);
 	        }
 	        socket.shutdownOutput(); 
-	        System.out.println("发送完毕");
+	        System.out.println("send over");
 	        
 	        
 	    /*    
